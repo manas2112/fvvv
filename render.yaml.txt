@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: fvv-bot
+    runtime: python
+    plan: free
+    region: singapore
+    buildCommand: |
+      pip install --upgrade pip
+      pip install -r requirements.txt
+    startCommand: python jeldom.py
+    envVars:
+      - key: TOKEN
+        value: 7646539984:AAHTN4u9KZ3VY2C1hcx8tCvO-2FYYblJk3U
+      - key: PORT
+        value: 10000
